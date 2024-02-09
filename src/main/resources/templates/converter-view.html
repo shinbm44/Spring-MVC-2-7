@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>${number}: <span th:text="${number}" ></span></li>
+    <li>${{number}}: <span th:text="${{number}}" ></span></li>
+    <li>${ipPort}: <span th:text="${ipPort}" ></span></li>
+    <li>${{ipPort}}: <span th:text="${{ipPort}}" ></span></li>
+    <!--
+    {}를 2번 감싸면 컨버터 적용
+    1번 감싸면, 객체를 호출하는 것 >> "toString"
+    number의 경우는 타임리프가 숫자를 문자로 자동으로 변환해주기 때문에
+    컨버터를 적용하지 않아도 변환된 값을 반환한다.
+    -->
+</ul>
+</body>
+</html>
